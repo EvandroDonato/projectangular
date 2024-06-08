@@ -1,0 +1,19 @@
+{
+    "profiles": {
+      "IIS Express": {
+        "commandName": "IISExpress",
+        "launchBrowser": true,
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
+        }
+      },
+      "YourProjectName": {
+        "commandName": "Project",
+        "launchBrowser": true,
+        "applicationUrl": "https://localhost:7044",
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
+        }
+      }
+    }
+  }

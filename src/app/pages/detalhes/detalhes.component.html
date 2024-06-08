@@ -1,0 +1,63 @@
+<mat-card>
+<div>
+    <h1>Detalhes Funcionario</h1>
+</div>
+<div *ngIf="funcionario">
+    <form >
+
+        <div class="input_box">
+            <mat-form-field>
+            <mat-label>Nome:</mat-label>
+            <input matInput type="text" value="{{funcionario.nome}}" disabled>
+            </mat-form-field>
+        </div>
+
+        <div class="input_box">
+            <mat-form-field>
+            <mat-label>SobreNome:</mat-label>
+            <input matInput type="text" value="{{funcionario.sobreNome}}" disabled>
+            </mat-form-field>   
+        </div>
+
+        <div class="input_box">
+            <mat-form-field>
+            <mat-label>Departamento:</mat-label>
+            <input matInput type="text" value="{{funcionario.departamento}}" disabled>
+            </mat-form-field>
+        </div>
+
+        <div class="input_box">
+            <mat-form-field>    
+            <mat-label>Turno:</mat-label>
+            <input matInput type="text" value="{{funcionario.turno}}" disabled>
+            </mat-form-field>
+        </div>
+
+        <div class="input_box">
+            <mat-form-field>
+            <mat-label>Sutuação:</mat-label>
+            <input matInput type="text" value="{{funcionario.ativo == true ? 'Ativo' : 'Inativo' }}" disabled>
+            </mat-form-field>
+        </div>
+
+        <div class="input_box">
+            <mat-form-field>
+            <mat-label>Data de Criação:</mat-label>
+            <input matInput type="text" value="{{ funcionario.dataDeCriacao}}" disabled>
+            </mat-form-field>
+        </div>
+
+        <div class="input_box">
+            <mat-form-field>
+            <mat-label>Data de Alteração:</mat-label>
+            <input matInput type="text" value="{{funcionario.dataDeAlteracao}}" disabled>
+            </mat-form-field>
+        </div>
+
+        <div class="btn-box">
+        <button (click)="InativaFuncionario()"mat-raised-button color="warn">Inativar Usario</button>
+        <button routerLink="/"mat-button>Voltar</button>
+        </div>
+    </form>
+</div>
+</mat-card>
