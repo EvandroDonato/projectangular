@@ -8,3 +8,4 @@ export interface Funcionario{
     dataDeCriacao?:string,
     dataDeAlteracao?: string,
   }
+  

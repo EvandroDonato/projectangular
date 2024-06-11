@@ -1,5 +1,5 @@
-<mat-card>
-<h1>{{btnTitulo}}</h1>
+<po-container>
+ <h1>{{btnTitulo}}</h1> 
 
 <form [formGroup]="funcionarioForm" (ngSubmit)="submit()" #formDit="ngForm">
 <input type="hidden" formControlName="id">
@@ -10,17 +10,17 @@
   </mat-form-field> -->
          
 <div class="input_box">
-    <mat-form-field>
-        <mat-label for="">Nome:</mat-label>
-        <input matInput type="text" formControlName="nome" placeholder="Insira o nome!" required>
-    </mat-form-field>
+    <!-- <mat-form-field> -->
+        
+        <!-- <mat-label for="">Nome:</mat-label> -->
+        <!-- <po-input matInput type="text" formControlName="nome" placeholder="Insira o nome!" required></po-input> -->
+        <po-input  p-label="Nome" matInput type="text" formControlName="nome" placeholder="Insira o nome!" required></po-input>
+    <!-- </mat-form-field> -->
 </div>
 
 <div class="input_box">
-    <mat-form-field>
-        <mat-label for="">SobreNome:</mat-label>
-        <input matInput type="text" formControlName="sobreNome" placeholder="Insira o sobrenome!" required>
-    </mat-form-field>
+        <!-- <mat-label for="">SobreNome:</mat-label> -->
+        <po-input p-label="SobreNome" type="text" formControlName="sobreNome" placeholder="Insira o sobrenome!" required></po-input>
 </div>
 
 <!-- <mat-form-field>
@@ -33,21 +33,38 @@
   </mat-form-field> -->
 
 
-<div class="input_box">
-    <mat-form-field>
-    <mat-label for="">Departamento:</mat-label>
-    <mat-select id="departamento" formControlName="departamento" required>
+<!-- <div class="input_box">
+    <!-- <mat-form-field> --
+    <po-label for="">Departamento:</po-label>
+    <po-select id="departamento" formControlName="departamento" required>
         <mat-option value="RH">RH</mat-option>
         <mat-option value="Financeiro">Financeiro</mat-option> 
         <mat-option value="Compra">Compra</mat-option> 
         <mat-option value="Atendimento">Atendimento</mat-option>
         <mat-option value="Zeladoria">Zeladoria</mat-option>
-    </mat-select>
-    </mat-form-field>
+    </po-select>
+    <!-- </mat-form-field> --
+</div> -->
+
+<div class="input_box1">
+   
+    <po-select 
+    id="departamento" formControlName="departamento" required
+    p-label="Departamento"
+    [p-options]="[
+      { label: 'RH', value: 'RH' },
+      { label: 'Financeiro', value: 'Financeiro' },
+      { label: 'Compra', value: 'Compra' },
+      { label: 'Atendimento', value: 'Atendimento' },
+      { label: 'Zeladoria', value: 'Zeladoria' }
+      
+    ]"
+  >
+  </po-select>
 </div>
 
 
-<div class="input_box">
+<!-- <div class="input_box">
     <mat-form-field>
     <mat-label for="">Turno:</mat-label>
     <mat-select id="turno" formControlName="turno" required>
@@ -56,13 +73,30 @@
         <mat-option value="Noite">Noite</mat-option> 
     </mat-select>
     </mat-form-field>
+</div> -->
+
+<div class="input_box1">
+    <po-select 
+    id="turno" formControlName="turno" required
+    p-label="Turno"
+    [p-options]="[
+      { label: 'Manha', value: 'Manha' },
+      { label: 'Tarde', value: 'Tarde' },
+      { label: 'Noite', value: 'Noite' },
+    ]"
+  >
+  </po-select>
 </div>
 
 
-<div class="btn-box">
-<button type="submit" [disabled]="!funcionarioForm.valid" mat-raised-button color="accent">{{btnAcao}}</button>
-<button routerLink="/"mat-raised-button>Voltar</button>
+
+
+<div class="btn-boxPO">
+<button type="submit" [disabled]="!funcionarioForm.valid" mat-raised-button color="accent">{{btnAcao}}</button> 
+<!-- <po-button   p-label="{{btnAcao}}" (p-click)="onClick()"></po-button> -->
+
+<po-button p-label="Voltar" routerLink="/">Voltar</po-button>
 </div>
 
 </form>
-</mat-card>
+</po-container>

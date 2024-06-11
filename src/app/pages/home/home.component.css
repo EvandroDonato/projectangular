@@ -1,9 +1,28 @@
 .funcionario-box{
     width: 100%;
     gap: 15px;
-    flex-direction: column;
-    display: flex;
     justify-content: space-evenly;
     align-items: left;
     margin-bottom: 2rem;
+}
+
+.funcionario-box po-button{
+
+    
+    flex-direction: column;
+    display: flex;
+    
+    
+}
+
+po-container{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 3rem;
+    margin-top: 5rem;
+
 }

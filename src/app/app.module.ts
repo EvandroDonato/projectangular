@@ -25,6 +25,17 @@ import {MatTableModule} from '@angular/material/table';
 import {Component} from '@angular/core';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ExcluirComponent } from './componentes/excluir/excluir.component';
+import { PoModule } from '@po-ui/ng-components';
+import { RouterModule } from '@angular/router';
+import { PoTemplatesModule } from '@po-ui/ng-templates';
+
+//PO-UI
+import { PoButtonModule } from '@po-ui/ng-components';
+import { PoButtonGroupModule } from '@po-ui/ng-components';
+import { PoFieldModule } from '@po-ui/ng-components';
+import { PoContainerModule } from '@po-ui/ng-components';
+import { PoTableModule } from '@po-ui/ng-components';
+import { PoDynamicModule } from '@po-ui/ng-components';
 
 
 
@@ -61,6 +72,16 @@ import { PoTemplatesModule } from '@po-ui/ng-templates';
     MatSelectModule,
     MatTableModule,
     MatDialogModule,
+    PoModule,
+    RouterModule.forRoot([]),
+    PoTemplatesModule,
+    PoButtonModule ,
+    PoButtonGroupModule,
+    PoFieldModule,
+    FormsModule,
+    PoContainerModule,
+    PoTableModule,
+    PoDynamicModule,
     
     
     /*RouterModule.forRoot([]),

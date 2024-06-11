@@ -2,6 +2,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Funcionario } from '../../models/Funcionarios';
+import { CadastroComponent } from '../../pages/cadastro/cadastro.component';
+
 
 
 @Component({
@@ -17,6 +19,8 @@ export class FuncionarioFormComponent implements OnInit{
 
   funcionarioForm!: FormGroup;
   //ativo:number = 1;
+
+  
 
 
   constructor() {
@@ -51,5 +55,10 @@ export class FuncionarioFormComponent implements OnInit{
 
       this.onSubmit.emit(this.funcionarioForm.value);
   }
+  onClick() {
+    this.btnAcao!
+  }
+
+  
 
 }

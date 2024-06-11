@@ -31,7 +31,7 @@ export class CadastroComponent {
           this.router.navigate(['/']);
        })
   }
-
+ 
 
 
 }
